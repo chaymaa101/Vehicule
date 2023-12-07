@@ -1,0 +1,31 @@
+@startuml
+
+!define RECTANGLE class
+
+RECTANGLE "Jumeau Numérique" {
+  +Collecte de Données en Temps Réel()
+  +Modélisation Numérique Précise()
+  +Intégration avec les Systèmes Existants()
+  +Plateforme d'Analyse de Données()
+  +Sécurité des Données()
+  +Interface Utilisateur Intuitive()
+  +Automatisation de Processus()
+}
+
+RECTANGLE "Exigences Non Fonctionnelles" {
+  +Performances()
+  +Sécurité et Confidentialité()
+  +Évolutivité()
+  +Fiabilité()
+  +Interopérabilité()
+  +Formation du Personnel()
+}
+
+RECTANGLE "Exigences d'Implémentation" {
+  +Capteurs et Dispositifs IoT()
+  +Connectivité Réseau()
+  +Matériel Informatique()
+  +Logiciels et Outils()
+}
+
+@enduml
