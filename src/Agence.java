@@ -2,7 +2,7 @@
 import java.util.LinkedList;
 import java.util.Scanner;
 import java.lang.reflect.ParameterizedType;
-import java.lang.reflect.Type;
+/*import java.lang.reflect.Type;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -13,7 +13,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 public class Agence {
     public static LinkedList<Vehicule> list= new LinkedList<Vehicule>();// Cette liste semble être destinée à stocker des instances de la classe Vehicule.
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
         
         String rep;
         do{
@@ -33,6 +33,7 @@ public class Agence {
             break;
             case 1:
                 AdministrationVoiture admin=new AdministrationVoiture();
+                VoitureUtile ad=new VoitureUtile();
                 System.out.println("Menu pour la gestion des voitures:");
                 System.out.println("0-Ajout de voiture");
                 System.out.println("1- Suppression de voitures");
@@ -45,19 +46,7 @@ public class Agence {
                 int choix1= sc.nextInt();
                 switch(choix1){
                     case 0:
-            {
-                try {
-                    //admin.AjouterVehicule();
-                    Voiture d=new Voiture("e","t","f","g");
-                    VoituretUtile hee=new VoituretUtile();
-                    hee.ajouterVoiture(d);
-                } catch (SQLException ex) {
-                    Logger.getLogger(Agence.class.getName()).log(Level.SEVERE, null, ex);
-                }
-                
-            }
-                        
-                        
+                        ajouterNouvelleVoiture();
                         break;
 
                     case 1:
@@ -171,7 +160,7 @@ public class Agence {
             rep=sc.next();
 
         }while(rep.equals("o"));
-        /// try
+        
 
     }
     
